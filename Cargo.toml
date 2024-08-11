@@ -14,6 +14,6 @@ homepage = "https://github.com/nanvix"
 crate-type = ["lib"]
 
 [dependencies]
-error = { git = "https://github.com/nanvix/error", branch = "releases/v0.0.1" }
-bitmap = { git = "https://github.com/nanvix/bitmap", branch = "releases/v0.0.1" }
-raw-array = { git = "https://github.com/nanvix/raw-array", branch = "releases/v0.0.1" }
+bitmap = { git = "https://github.com/nanvix/bitmap", branch = "releases/v0.0.2" }
+error = { git = "https://github.com/nanvix/error", branch = "releases/v0.0.2" }
+raw-array = { git = "https://github.com/nanvix/raw-array", branch = "releases/v0.0.2" }
