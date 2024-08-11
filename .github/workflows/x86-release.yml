@@ -1,7 +1,7 @@
 # Copyright(c) The Maintainers of Nanvix.
 # Licensed under the MIT License.
 
-name: Build
+name: x86 Release
 
 on: push
 
@@ -23,8 +23,8 @@ jobs:
         port: ${{ secrets.portnum }}
         envs: TARGET_BRANCH
         script: |
-          rm -rf slab
-          git clone --recursive https://github.com/nanvix/slab.git --branch ${TARGET_BRANCH}
+          rm -rf slab-release
+          git clone --recursive https://github.com/nanvix/slab.git --branch ${TARGET_BRANCH} slab-release
 
   build:
     name: Build
@@ -40,9 +40,8 @@ jobs:
         port: ${{ secrets.portnum }}
         script: |
           source "$HOME/.cargo/env"
-          cd slab
-          cargo build --verbose
-
+          cd slab-release
+          cargo build --release
 
   cleanup:
     name: Cleanup
@@ -58,7 +57,7 @@ jobs:
         key: ${{ secrets.sshkey }}
         port: ${{ secrets.portnum }}
         script: |
-          cd slab
+          cd slab-release
           git checkout --force dev
           git clean -fdx
           git remote prune origin
