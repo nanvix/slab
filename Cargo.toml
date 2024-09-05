@@ -3,7 +3,7 @@
 
 [package]
 name = "slab"
-version = "0.0.4"
+version = "0.0.5"
 license-file = "LICENSE.txt"
 edition = "2021"
 authors = ["The Maintainers of Nanvix"]
@@ -14,9 +14,9 @@ homepage = "https://github.com/nanvix"
 crate-type = ["lib"]
 
 [dependencies]
-bitmap = { git = "https://github.com/nanvix/bitmap", branch = "releases/v0.0.4" }
-error = { git = "https://github.com/nanvix/error", branch = "releases/v0.0.4" }
-raw-array = { git = "https://github.com/nanvix/raw-array", branch = "releases/v0.0.4" }
+bitmap = { git = "https://github.com/nanvix/bitmap", branch = "releases/v0.0.5" }
+error = { git = "https://github.com/nanvix/error", branch = "releases/v0.0.5" }
+raw-array = { git = "https://github.com/nanvix/raw-array", branch = "releases/v0.0.5" }
 
 [profile.release]
 opt-level = 3
